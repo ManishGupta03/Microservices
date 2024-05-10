@@ -1,0 +1,26 @@
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://Manish:1234321@cluster0.9dt5vdf.mongodb.net/ratingdb
+      database: ratingdb
+  application:
+    name: RATING-SERVICE
+server:
+  port: 8083
+
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+
+okta:
+  oauth2:
+    issuer: https://dev-57872596.okta.com/oauth2/default
+    audience: api://default

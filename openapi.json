@@ -1,0 +1,254 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "USER_SERVICE",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8081"
+    },
+    {
+      "url": "http://localhost:8083"
+    },
+    {
+      "url": "http://localhost:8082"
+    },
+    {
+      "url": "http://localhost:8084"
+    }
+  ],
+  "tags": [
+    {
+      "name": "UserService"
+    },
+    {
+      "name": "RatingService"
+    },
+    {
+      "name": "HotelService"
+    },
+    {
+      "name": "APIGATEWAY"
+    }
+  ],
+  "paths": {
+    "/users/1retthuwbbdgvffsvvsffdew3w": {
+      "get": {
+        "tags": [
+          "APIGATEWAY"
+        ],
+        "summary": "GetUserByUserId",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/users": {
+      "get": {
+        "tags": [
+          "APIGATEWAY"
+        ],
+        "summary": "GetAllUsers",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/users/create": {
+      "post": {
+        "tags": [
+          "APIGATEWAY"
+        ],
+        "summary": "CreateUser",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "example": {
+                  "name": "Manish",
+                  "email": "manish67@gmail.com",
+                  "about": "I am a full stack developer backend with nodejs and springboot ."
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/ratings": {
+      "get": {
+        "tags": [
+          "RatingService"
+        ],
+        "summary": "getAllRatings",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "APIGATEWAY"
+        ],
+        "summary": "CreateRatings",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "example": {
+                  "userId": "fgtgdttgghsgtdggdgdtt",
+                  "hotelId": "huhuhuhdgffrfseccadds",
+                  "rating": 5,
+                  "feedback": "This hotel having good ratings that shows it is a good hotel"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/ratings/users/fgtggsgsfgsrfggagfsrfssd": {
+      "get": {
+        "tags": [
+          "APIGATEWAY"
+        ],
+        "summary": "GetAllRatingsBYUserId",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/hotels/1retthuwbbdgvffsffdew3wotels": {
+      "get": {
+        "tags": [
+          "RatingService"
+        ],
+        "summary": "getRatingByHotelId",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/hotels/create": {
+      "post": {
+        "tags": [
+          "APIGATEWAY"
+        ],
+        "summary": "CreateHotels",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "example": {
+                  "name": "Ramoji Film City",
+                  "location": "Banjara Hills",
+                  "about": "wonderful place to visit, you will explore how behind the stage things working on."
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/hotels": {
+      "get": {
+        "tags": [
+          "APIGATEWAY"
+        ],
+        "summary": "GetAllHotels",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/hotels/ythugyhfhfhfhhygdbhhhd": {
+      "get": {
+        "tags": [
+          "APIGATEWAY"
+        ],
+        "summary": "GetHotelByHotelId",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    },
+    "/ratings/hotels/fgsdfggsgsfgsrfggagfgtyd": {
+      "get": {
+        "tags": [
+          "APIGATEWAY"
+        ],
+        "summary": "GetAllRatingsByHotelId",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {}
+            }
+          }
+        }
+      }
+    }
+  }
+}
